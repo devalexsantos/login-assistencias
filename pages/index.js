@@ -1,4 +1,5 @@
 import Head from "next/head";
+import CardsSection from "../components/CardsSection";
 import Header from "../components/Header";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
 
       <main>
         <Header />
+        <CardsSection />
       </main>
     </div>
   );
