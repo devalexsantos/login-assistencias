@@ -3,7 +3,7 @@ import { ArrowBendUpRight } from "phosphor-react";
 export default function Header() {
   return (
     <div className="w-auto text-center bg-cyan-900 py-6">
-      <div className="m-auto container flex flex-col justify-center align-center gap-6">
+      <div className="m-auto container mx-auto flex flex-col justify-center align-center gap-6">
         <div className="flex flex-col gap-2 md:gap-0 justify-center md:flex-row md:justify-between text-white py-4 md:py-0">
           <span>Logo</span>
           <button className="flex justify-center gap-2 align-center p-1 bg-white text-cyan-900 rounded w-[70%] md:w-auto m-auto md:m-0 md:px-4">
