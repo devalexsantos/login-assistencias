@@ -2,7 +2,21 @@ import Head from "next/head";
 import CardsSection from "../components/CardsSection";
 import Header from "../components/Header";
 
-export default function Home() {
+export async function getStaticProps() {
+  // Fetch data from external API
+  const res = await fetch(
+    `https://login-strapi-nh2re.ondigitalocean.app/api/assistencias-login-industrias`
+  );
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return {
+    props: { cards: data },
+    revalidate: 10, // In seconds
+  };
+}
+
+export default function Home({ cards }) {
   return (
     <div>
       <Head>
@@ -13,7 +27,7 @@ export default function Home() {
 
       <main>
         <Header />
-        <CardsSection />
+        <CardsSection data={cards} />
       </main>
     </div>
   );
